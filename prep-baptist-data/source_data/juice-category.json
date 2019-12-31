@@ -1,0 +1,66 @@
+[
+ {
+   "Id": 1,
+   "Name": "Aging Well"
+ },
+ {
+   "Id": 2,
+   "Name": "Brain, Spine & Nerve"
+ },
+ {
+   "Id": 3,
+   "Name": "Cancer"
+ },
+ {
+   "Id": 4,
+   "Name": "Child Health"
+ },
+ {
+   "Id": 5,
+   "Name": "Community Health"
+ },
+ {
+   "Id": 6,
+   "Name": "Diabetes"
+ },
+ {
+   "Id": 7,
+   "Name": "Ear, Nose & Throat"
+ },
+ {
+   "Id": 8,
+   "Name": "Heart & Vascular"
+ },
+ {
+   "Id": 9,
+   "Name": "Lungs, Breathing & Sleep"
+ },
+ {
+   "Id": 10,
+   "Name": "Mental Health"
+ },
+ {
+   "Id": 11,
+   "Name": "Orthopedics, Bones & Muscles"
+ },
+ {
+   "Id": 12,
+   "Name": "Pregnancy & Childbirth"
+ },
+ {
+   "Id": 13,
+   "Name": "Primary Care"
+ },
+ {
+   "Id": 14,
+   "Name": "Wellness"
+ },
+ {
+   "Id": 15,
+   "Name": "Women’s Health"
+ },
+ {
+   "Id": 31,
+   "Name": "Men's Health"
+ }
+]

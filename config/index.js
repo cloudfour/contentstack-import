@@ -5,9 +5,9 @@ module.exports = {
     code: 'en-us'
   },
   // Credentials
-  email: '',
-  password: '',
-  target_stack: '',
+  email: 'example@cloudfour.com',
+  password: 'password',
+  target_stack: 'blt8deeddb1693688d4', //baptist
   // Folder in which exported contents are stored
-  data: './contents'
+  data: './data'
 };

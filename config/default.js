@@ -13,8 +13,7 @@ module.exports = {
       'webhooks',
       'global_fields',
       'content_types',
-      'entries',
-      'labels'
+      'entries'
     ],
     locales: {
       dirName: 'locales',
@@ -28,10 +27,6 @@ module.exports = {
     environments: {  
       dirName: 'environments',
       fileName: 'environments.json'
-    },
-    labels: {  
-      dirName: 'labels',
-      fileName: 'labels.json'
     },
     extensions: {
       dirName: 'extensions',
@@ -112,13 +107,12 @@ module.exports = {
     webhooks: '/webhooks/',
     globalfields: '/global_fields/',
     folders: '/folders/',
-    stacks: '/stacks/',
-    labels: '/labels/'
+    stacks: '/stacks/'
   },
   preserveStackVersion: false
   // if exisstingContentDir exists, no backup folder will be created
   // rather, its value(path) will be used instead
-  // useBackedupDir: './_backup_413',
+  // useBackedupDir: './_backup_340',
   // is the no. of files to be copied/backed up concurrently
   // backupConcurrency: 10,
 };

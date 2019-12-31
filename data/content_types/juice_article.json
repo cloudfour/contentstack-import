@@ -1,0 +1,557 @@
+{
+    "created_at": "2019-11-25T22:35:37.791Z",
+    "updated_at": "2019-12-30T22:13:25.726Z",
+    "title": "Juice Article",
+    "uid": "juice_article",
+    "_version": 32,
+    "inbuilt_class": false,
+    "schema": [
+        {
+            "display_name": "Title",
+            "uid": "title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "_default": true,
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "URL",
+            "uid": "url",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "_default": true,
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "reference",
+            "display_name": "Author",
+            "reference_to": [
+                "juice_author",
+                "juice_author_import_testing"
+            ],
+            "field_metadata": {
+                "ref_multiple": false,
+                "ref_multiple_content_types": true
+            },
+            "uid": "author",
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "reference",
+            "display_name": "Category",
+            "reference_to": [
+                "juice_category_import_testing",
+                "juice_category"
+            ],
+            "field_metadata": {
+                "ref_multiple": false,
+                "ref_multiple_content_types": true
+            },
+            "uid": "category",
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Hero Section (Optional)",
+            "field_metadata": {},
+            "schema": [
+                {
+                    "data_type": "text",
+                    "display_name": "Subheading (Optional)",
+                    "uid": "subhead",
+                    "field_metadata": {
+                        "description": "",
+                        "default_value": "",
+                        "version": 3
+                    },
+                    "format": "",
+                    "error_messages": {
+                        "format": ""
+                    },
+                    "multiple": false,
+                    "mandatory": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Header Image (Optional)",
+                    "extension_uid": "blt89fd64a1fb1db625",
+                    "field_metadata": {
+                        "extension": true
+                    },
+                    "uid": "header_image",
+                    "config": {
+                        "minWidth": 288,
+                        "maxWidth": 640,
+                        "bytesStep": 20,
+                        "maxImages": 10
+                    },
+                    "data_type": "json",
+                    "multiple": false,
+                    "mandatory": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "data_type": "text",
+                    "display_name": "Intro Content (Optional)",
+                    "uid": "intro_content",
+                    "field_metadata": {
+                        "description": "",
+                        "markdown": true,
+                        "version": 3,
+                        "placeholder": "",
+                        "instruction": ""
+                    },
+                    "multiple": false,
+                    "mandatory": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "hero_section_optional_",
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "text",
+            "display_name": "Description",
+            "uid": "description",
+            "field_metadata": {
+                "description": "",
+                "default_value": "",
+                "multiline": true,
+                "instruction": "Short description used when linking to this article.",
+                "version": 3
+            },
+            "format": "",
+            "error_messages": {
+                "format": ""
+            },
+            "max": 1000,
+            "mandatory": true,
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "text",
+            "display_name": "Main Content",
+            "uid": "main_content",
+            "field_metadata": {
+                "description": "",
+                "markdown": true,
+                "version": 3,
+                "instruction": "This is where you start your page's content. Then you can add blocks to the Primary Content Container below if you want to add additional types of content."
+            },
+            "mandatory": true,
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "blocks",
+            "display_name": "Primary Content Container",
+            "blocks": [
+                {
+                    "title": "Text Block",
+                    "uid": "text_block",
+                    "schema": [
+                        {
+                            "data_type": "text",
+                            "display_name": "Heading",
+                            "uid": "header",
+                            "field_metadata": {
+                                "description": "",
+                                "default_value": "",
+                                "version": 3
+                            },
+                            "format": "",
+                            "error_messages": {
+                                "format": ""
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        },
+                        {
+                            "data_type": "text",
+                            "display_name": "Text",
+                            "uid": "text",
+                            "field_metadata": {
+                                "description": "",
+                                "markdown": true,
+                                "version": 3
+                            },
+                            "non_localizable": false,
+                            "mandatory": true,
+                            "multiple": false,
+                            "unique": false
+                        }
+                    ]
+                },
+                {
+                    "title": "List",
+                    "uid": "list_block",
+                    "schema": [
+                        {
+                            "data_type": "text",
+                            "display_name": "Heading",
+                            "uid": "list_block_heading",
+                            "field_metadata": {
+                                "description": "",
+                                "default_value": "",
+                                "version": 3
+                            },
+                            "format": "",
+                            "error_messages": {
+                                "format": ""
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        },
+                        {
+                            "data_type": "text",
+                            "display_name": "List Type",
+                            "display_type": "radio",
+                            "enum": {
+                                "advanced": false,
+                                "choices": [
+                                    {
+                                        "value": "Bullet (•)"
+                                    },
+                                    {
+                                        "value": "Numbered (1,2,3)"
+                                    }
+                                ]
+                            },
+                            "multiple": false,
+                            "uid": "list_type",
+                            "field_metadata": {
+                                "description": "",
+                                "default_value": "Bullet (•)",
+                                "version": 3
+                            },
+                            "non_localizable": false,
+                            "mandatory": true,
+                            "unique": false
+                        },
+                        {
+                            "data_type": "link",
+                            "display_name": "List Item",
+                            "uid": "list_item",
+                            "field_metadata": {
+                                "description": "",
+                                "default_value": {
+                                    "title": "",
+                                    "url": ""
+                                },
+                                "instruction": "Text is required for each list item. URLs are optional. If a URL is present, the list item will be converted into a link."
+                            },
+                            "non_localizable": false,
+                            "mandatory": true,
+                            "multiple": true,
+                            "unique": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Accordion",
+                    "uid": "accordion",
+                    "schema": [
+                        {
+                            "data_type": "group",
+                            "display_name": "Accordion sections",
+                            "field_metadata": {},
+                            "schema": [
+                                {
+                                    "data_type": "text",
+                                    "display_name": "Heading",
+                                    "uid": "heading",
+                                    "field_metadata": {
+                                        "description": "",
+                                        "default_value": "",
+                                        "version": 3
+                                    },
+                                    "format": "",
+                                    "error_messages": {
+                                        "format": ""
+                                    },
+                                    "non_localizable": false,
+                                    "mandatory": true,
+                                    "multiple": false,
+                                    "unique": false
+                                },
+                                {
+                                    "data_type": "text",
+                                    "display_name": "Content",
+                                    "uid": "content",
+                                    "field_metadata": {
+                                        "description": "",
+                                        "markdown": true,
+                                        "version": 3
+                                    },
+                                    "non_localizable": false,
+                                    "mandatory": true,
+                                    "multiple": false,
+                                    "unique": false
+                                }
+                            ],
+                            "uid": "accordion_sections",
+                            "non_localizable": false,
+                            "multiple": true,
+                            "mandatory": false,
+                            "unique": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Image Block",
+                    "uid": "image_block",
+                    "schema": [
+                        {
+                            "display_name": "Image",
+                            "extension_uid": "blt89fd64a1fb1db625",
+                            "field_metadata": {
+                                "extension": true
+                            },
+                            "uid": "image",
+                            "non_localizable": false,
+                            "config": {
+                                "minWidth": 320,
+                                "maxWidth": 750,
+                                "bytesStep": 20,
+                                "maxImages": 12
+                            },
+                            "data_type": "json",
+                            "mandatory": true,
+                            "multiple": false,
+                            "unique": false
+                        },
+                        {
+                            "data_type": "text",
+                            "display_name": "Caption",
+                            "uid": "caption",
+                            "field_metadata": {
+                                "description": "",
+                                "markdown": true,
+                                "version": 3
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Wave Divider",
+                    "uid": "wave_divider",
+                    "schema": [
+                        {
+                            "data_type": "text",
+                            "display_name": "Heading (Optional)",
+                            "uid": "divider_heading",
+                            "field_metadata": {
+                                "description": "",
+                                "default_value": "",
+                                "version": 3
+                            },
+                            "format": "",
+                            "error_messages": {
+                                "format": ""
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        },
+                        {
+                            "data_type": "text",
+                            "display_name": "Intro (Optional)",
+                            "uid": "intro_optional",
+                            "field_metadata": {
+                                "description": "",
+                                "markdown": true,
+                                "version": 3
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Video",
+                    "uid": "video",
+                    "schema": [
+                        {
+                            "data_type": "text",
+                            "display_name": "Heading",
+                            "uid": "heading",
+                            "field_metadata": {
+                                "description": "",
+                                "default_value": "",
+                                "version": 3
+                            },
+                            "format": "",
+                            "error_messages": {
+                                "format": ""
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        },
+                        {
+                            "data_type": "text",
+                            "display_name": "Intro Text (Optional)",
+                            "uid": "intro_text_optional",
+                            "field_metadata": {
+                                "description": "",
+                                "markdown": true,
+                                "version": 3
+                            },
+                            "non_localizable": false,
+                            "multiple": false,
+                            "mandatory": false,
+                            "unique": false
+                        },
+                        {
+                            "display_name": "Video",
+                            "extension_uid": "blt517c4d1c70025ab5",
+                            "field_metadata": {
+                                "extension": true,
+                                "version": 3,
+                                "default_value": ""
+                            },
+                            "uid": "video",
+                            "non_localizable": false,
+                            "config": {},
+                            "data_type": "text",
+                            "mandatory": false,
+                            "multiple": false,
+                            "unique": false,
+                            "reference_to": ""
+                        }
+                    ]
+                }
+            ],
+            "multiple": true,
+            "uid": "primary_content_container",
+            "field_metadata": {
+                "description": "On the website, this is the main body of the page after the main content block."
+            },
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "JSON-LD",
+            "extension_uid": "blt6fdc0a4e2cfdc8d1",
+            "field_metadata": {
+                "extension": true
+            },
+            "uid": "json_ld",
+            "config": {},
+            "data_type": "json",
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "number",
+            "display_name": "Legacy Sequence ID",
+            "uid": "legacy_sequence_id",
+            "field_metadata": {
+                "description": "",
+                "default_value": ""
+            },
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "text",
+            "display_name": "Legacy Image Caption",
+            "uid": "legacy_image_caption",
+            "field_metadata": {
+                "description": "",
+                "default_value": "",
+                "version": 3
+            },
+            "format": "",
+            "error_messages": {
+                "format": ""
+            },
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
+        }
+    ],
+    "last_activity": {},
+    "maintain_revisions": true,
+    "description": "",
+    "DEFAULT_ACL": [
+        {
+            "k": "others",
+            "v": {
+                "read": false,
+                "create": false
+            }
+        },
+        {
+            "k": "users.bltf559ed7d5c9aba64",
+            "v": {
+                "read": true,
+                "sub_acl": {
+                    "read": true
+                }
+            }
+        }
+    ],
+    "SYS_ACL": {
+        "roles": []
+    },
+    "options": {
+        "is_page": true,
+        "singleton": false,
+        "title": "title",
+        "sub_title": [],
+        "url_pattern": "/:title",
+        "url_prefix": "/"
+    },
+    "abilities": {
+        "get_one_object": true,
+        "get_all_objects": true,
+        "create_object": true,
+        "update_object": true,
+        "delete_object": true,
+        "delete_all_objects": true
+    }
+}

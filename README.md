@@ -1,62 +1,42 @@
-# Contentstack import utility
+# Contentstack import utility FORK
 
-Contentstack is a headless CMS with an API-first approach that puts content at the centre. It is designed to simplify the process of publication by separating code from content.
+This is a fork of [contentstack/contentstack-import](https://github.com/contentstack/contentstack-import) which we've hacked to include a pre-processing script which converts an exported database dump into the structure/format compatible with Contentstack's import tool.
 
-This tool helps you to import content which is exported using [contentstack-export](https://github.com/contentstack/contentstack-export) utility into another stack. 
-
-## Installation
-Download this project and install all the modules using following command.
-
-```bash
-$ npm install
-```
-
-## Configuration
-Update configuration details at config/index.js
-
-```js
-{
- master_locale: {
-  name: '', // Stack's master locale. ex: 'English - United States'
-  code: ''  // Stack master locale's code. ex: 'en-us'
- },
- email: '', // Your registered email id
- password: '', // Account password
- target_stack: '', // Stack api_key. This is the stack, where the data will be imported
- data: '' // The data that's to be exported. This is generally the one exported via the contentstack-export utility. ex: '../contentstack-export/contents'. Kindly provide the relative path to the directory
-```
+For import functionality, see [the original README](https://github.com/contentstack/contentstack-import/blob/master/README.md)...
 
 ## Usage
-Once all things are configured, you can run following commands
 
-1. Import all modules [ assets, locales, environments, extensions, webhooks, global_fields, content_types, entries, labels ]
-```bash
-$ npm run import
+* `npm run prep` will read the files from source_data/ and write to output_data/
+* `npm run test` will run the test suite
+
+## Requirements
+
+[x] Replace non-whitelisted authors with "Juice Staff"
+[x] Map author usernames to auther entry (imports)
+[x] Filter out articles NOT ( isActive && isPublished )
+[x] Parse the string of category strings into individual items
+[x] Map categories to category entries
+[x] Gather image fields to match the Cloudinary fields
+[x] Coerce SequenceId into int field
+[x] Map image caption to `legacy_image_caption`
+[x] Compile the URL field from various fields
+
+## Import Sequence Checklist
+1. Update `productionMode` variable in config.js
+1. Run `npm run test` to make sure nothing broke
+1. Run `npm run prep` to build new data files
+1. Double-check that article reference fields point to NON *IMPORT versions
+1. `npm run import`
+1. Consider updating the references in CS to REMOVE *_import_testing options
+
+NOTE: Lots of vague errors in the console are normal. Usual suspects:
+
+```
+error: Success file was not found at: /Users/emerson/Code/contentstack-import/_backup_841/mapper/entries/en-us/juice_article/success.json
+```
+```
+error: Entry Uid: blt52843cdac9ead162 of Content Type: juice_article_import_testing failed to update in locale: en-us
+error: {"error_message":"Entry update failed.","error_code":121,"errors":{"title":["is not unique."]}}
 ```
 
-2. Import a specific module
-```bash
-$ npm run import-assets
-$ npm run import-locales
-$ npm run import-env
-$ npm run import-extensions
-$ npm run import-webhooks
-$ npm run import-globalfields
-$ npm run import-contenttypes
-$ npm run import-entries
-$ npm run import-labels
-
-```
-> Note: Before importing entries you must have to import locales, assets and content types.
-
-### Known Limitations and Issues
-* It will migrate only latest published version of entry.
-* Does not support the following
-  * Roles
-  * Users
-  * Releases
-  * Workflow
-* If 2 different versions of the same asset have the same file name, only the 1st version will be imported
-
-## License
-This project is licensed under MIT license
+^ Neither of these appear to indicate that a problem actually happened.

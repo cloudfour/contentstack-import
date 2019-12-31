@@ -1,22 +1,22 @@
 {
   "name": "contentstack-import",
-  "version": "1.5.0",
+  "version": "1.4.0",
   "description": "Import data into Contentstack",
   "homepage": "https://www.contentstack.com/docs/tools-and-frameworks/content-migration/within-contentstack",
   "author": {
     "name": "Contentstack LLC <support@contentstack.com>",
     "url": "https://www.contentstack.com/"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
-    "bluebird": "3.5.1",
-    "debug": "4.1.0",
-    "lodash": "4.17.15",
-    "marked": "0.7.0",
-    "mkdirp": "0.5.1",
-    "ncp": "2.0.0",
-    "request": "2.88.0",
-    "winston": "2.2.0"
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "request": "^2.45.0",
+    "winston": "^2.2.0",
+    "marked": "*",
+    "debug": "4.1.0"
   },
   "engines": {
     "node": ">=6"
@@ -53,7 +53,8 @@
     "import-globalfields": "node app.js global_fields",
     "import-webhooks": "node app.js webhooks",
     "import-extensions": "node app.js extensions",
-    "import-labels": "node app.js labels"
+    "test": "jest",
+    "prep": "node ./prep-baptist-data/index.js"
   },
   "keywords": [
     "contentstack",
@@ -61,6 +62,7 @@
     "stack-backup"
   ],
   "devDependencies": {
-    "eslint": "5.9.0"
+    "eslint": "5.9.0",
+    "jest": "^24.9.0"
   }
 }
