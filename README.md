@@ -11,15 +11,15 @@ For import functionality, see [the original README](https://github.com/contentst
 
 ## Requirements
 
-[x] Replace non-whitelisted authors with "Juice Staff"
-[x] Map author usernames to auther entry (imports)
-[x] Filter out articles NOT ( isActive && isPublished )
-[x] Parse the string of category strings into individual items
-[x] Map categories to category entries
-[x] Gather image fields to match the Cloudinary fields
-[x] Coerce SequenceId into int field
-[x] Map image caption to `legacy_image_caption`
-[x] Compile the URL field from various fields
+- [x] Replace non-whitelisted authors with "Juice Staff"
+- [x] Map author usernames to auther entry (imports)
+- [x] Filter out articles NOT ( isActive && isPublished )
+- [x] Parse the string of category strings into individual items
+- [x] Map categories to category entries
+- [x] Gather image fields to match the Cloudinary fields
+- [x] Coerce SequenceId into int field
+- [x] Map image caption to `legacy_image_caption`
+- [x] Compile the URL field from various fields
 
 ## Import Sequence Checklist
 1. Update `productionMode` variable in config.js
