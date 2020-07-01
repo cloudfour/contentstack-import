@@ -8,6 +8,7 @@ For import functionality, see [the original README](https://github.com/contentst
 
 * `nvm use` (Tested on node version 14...) 
 * `npm install`
+* `mv config/index.example.js config/index.js` ...and then update credentials
 
 ## Usage
 
