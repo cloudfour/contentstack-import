@@ -6,7 +6,8 @@ For import functionality, see [the original README](https://github.com/contentst
 
 ## Setup
 
-`npm install`
+* `nvm use` (Tested on node version 14...) 
+* `npm install`
 
 ## Usage
 
