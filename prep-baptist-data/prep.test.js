@@ -130,7 +130,7 @@ test('packageArticles', () => {
             "IsActive": "1",
             "LastUpdateUser": "johnny.woodhouse",
             "LastUpdateDateTime": "2018-03-08 11:24:26.500",
-            "DatePublished": "2017-03-17 15:01:57.000",
+            "DatePublished": "2017-03-17T15:01:57.000",
             "PublishedByUser": "johnny.woodhouse",
             "IsPublished": "1",
             "DateCreated": "2017-03-17 15:01:57.000",
@@ -151,7 +151,7 @@ test('packageArticles', () => {
             "HtmlDescription": "<p>Pregnant with her first child...</p>",
             "SequenceId": "<p>Something went really wrong</p>",
             "IsActive": "1",
-            "DatePublished": "2017-03-17 15:01:57.000",
+            "DatePublished": "2017-03-17T15:01:57.000",
             "PublishedByUser": "johnny.woodhouse",
             "IsPublished": "1",
             "CreatedByUser": "johnny.woodhouse"
@@ -171,7 +171,7 @@ test('packageArticles', () => {
             "HtmlDescription": "<p>Pregnant with her first child...</p>",
             "SequenceId": "100",
             "IsActive": "0",
-            "DatePublished": "2017-03-17 15:01:57.000",
+            "DatePublished": "2017-03-17T15:01:57.000",
             "PublishedByUser": "johnny.woodhouse",
             "IsPublished": "1",
             "CreatedByUser": "johnny.woodhouse"
@@ -219,7 +219,8 @@ test('packageArticles', () => {
     expect(firstPackagedArticle["legacy_sequence_id"]).toBe(100);
     expect(firstPackagedArticle["legacy_image_caption"]).toBe("Christina Golden with her husband.");
     expect(firstPackagedArticle["url"]).toBe("/juice/Stories/pregnancy-childbirth/a-joyous-birth-followed-by-a-terrifying-surgery");
-    
+    expect(firstPackagedArticle["legacy_publication_date"]).toBe("2017-03-17");
+
     expect(secondPackagedArticle["category"]).toStrictEqual(
         expect.arrayContaining(
             [

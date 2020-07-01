@@ -512,6 +512,23 @@
             "mandatory": false,
             "unique": false,
             "non_localizable": false
+        },
+        {
+            "data_type": "isodate",
+            "display_name": "Legacy Publication Date",
+            "uid": "legacy_publication_date",
+            "startDate": null,
+            "endDate": null,
+            "field_metadata": {
+                "description": "This is for fixing publication dates of articles that were migrated from the legacy system",
+                "default_value": "",
+                "instruction": "This will override the system's publication date",
+                "hide_time": true
+            },
+            "multiple": false,
+            "mandatory": false,
+            "unique": false,
+            "non_localizable": false
         }
     ],
     "last_activity": {},

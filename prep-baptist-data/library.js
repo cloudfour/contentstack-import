@@ -146,12 +146,15 @@ const packageArticles = (old) => {
                 "intro_content": ""
             },
             "legacy_image_caption": item.ImageCaption || null,
-            "url" : buildArticleUrl(item)
+            "url" : buildArticleUrl(item),
+            "legacy_publication_date": trimDateTime(item.DatePublished) //DatePublished is absent if unpublished
         };
         i++;
     } );
     return neww;
 };
+
+const trimDateTime = (datetime) => datetime ? datetime.split('T')[0] : null;
 
 const buildArticleUrl = (article) => {
     return "/juice/Stories/" + article.CategoryUrl + '/' + article.Url;
