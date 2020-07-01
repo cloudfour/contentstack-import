@@ -7,8 +7,8 @@ module.exports = {
   // Credentials
   email: 'example@cloudfour.com',
   password: 'password',
-  target_stack: 'blt8deeddb1693688d4', //baptist
-  management_token: '',
+  target_stack: 'xxxxxxxxxxxxx', //baptist
+  management_token: 'yyyyyyyyyyyyyy',
   // Folder in which exported contents are stored
   data: './data'
 };

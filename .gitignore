@@ -4,4 +4,5 @@ logs
 contents
 npm-debug.log
 .DS_Store
-_backup
+_backup*
+config/index.js
