@@ -4,6 +4,10 @@ This is a fork of [contentstack/contentstack-import](https://github.com/contents
 
 For import functionality, see [the original README](https://github.com/contentstack/contentstack-import/blob/master/README.md)...
 
+## Setup
+
+`npm install`
+
 ## Usage
 
 * `npm run prep` will read the files from source_data/ and write to output_data/
