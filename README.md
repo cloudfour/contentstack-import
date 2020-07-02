@@ -11,7 +11,7 @@ For import functionality, see [the original README](https://github.com/contentst
 * `mv config/index.example.js config/index.js` ...and then update credentials
 
 ## Updating the source data
-* Kamran will likely deliver a CSV file exported from the database.
+* Kamran will likely deliver a CSV file exported from this query: `SELECT * FROM PatientStories ORDER BY DatePublished DESC`
 * Check that the column names match
 * Use [https://csvjson.com/csv2json](https://csvjson.com/csv2json) to convert the CSV to JSON
 * Do not check "parse numbers" or "parse json" 
