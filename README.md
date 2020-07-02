@@ -10,6 +10,16 @@ For import functionality, see [the original README](https://github.com/contentst
 * `npm install`
 * `mv config/index.example.js config/index.js` ...and then update credentials
 
+## Updating the source data
+* Kamran will likely deliver a CSV file exported from the database.
+* Check that the column names match
+* Use [https://csvjson.com/csv2json](https://csvjson.com/csv2json) to convert the CSV to JSON
+* Do not check "parse numbers" or "parse json" 
+* Look for artifacts like `"NULL"` (string versions of javascript constructs). Fix this with search/replace?
+* Look for wonkiness with quotes in strings. Ex: `"Code Stroke: \"I didn't have the classic symptoms"`
+* Update file paths in `prep-baptist-data/config.js` (if the new JSON file names differ)
+* Consider checking DB dump data 
+
 ## Usage
 
 * `npm run prep` will read the files from source_data/ and write to output_data/
