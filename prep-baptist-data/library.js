@@ -147,14 +147,14 @@ const packageArticles = (old) => {
             },
             "legacy_image_caption": item.ImageCaption || null,
             "url" : buildArticleUrl(item),
-            "legacy_publication_date": trimDateTime(item.DatePublished) //DatePublished is absent if unpublished
+            "legacy_publication_date": trimDateFromDatetime(item.DatePublished) //DatePublished is absent if unpublished
         };
         i++;
     } );
     return neww;
 };
 
-const trimDateTime = (datetime) => datetime ? datetime.split('T')[0] : null;
+const trimDateFromDatetime = (datetime) => datetime ? datetime.split(/[T\s]/)[0] : null;
 
 const buildArticleUrl = (article) => {
     return "/juice/Stories/" + article.CategoryUrl + '/' + article.Url;
@@ -245,5 +245,6 @@ module.exports = {
     categoryNameList,
     splitCategoriesString,
     mapCategoryNameToUid,
-    categoryMap
+    categoryMap,
+    trimDateFromDatetime
 };

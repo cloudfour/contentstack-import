@@ -11,7 +11,8 @@ const {
     splitCategoriesString,
     categoryMap,
     mapCategoryNameToUid,
-    packageCategories
+    packageCategories,
+    trimDateFromDatetime
 } = require('./library');
 
 const sourceAuthors = require('./source_data/juice-authors');
@@ -104,6 +105,13 @@ test('packageCategories', () => {
     expect(firstKey).toBe('category0');
     expect(packaged[firstKey]["title"]).toStrictEqual(Object.keys(map)[0]);
     expect(packaged[firstKey]["uid"]).toStrictEqual(firstKey);
+});
+
+test('trimDateFromDatetime', () => {
+    const datetime1 = '2017-03-17T15:01:57.000';
+    const datetime2 = '2018-03-08 11:24:26.500';
+    expect(trimDateFromDatetime(datetime1)).toBe('2017-03-17');
+    expect(trimDateFromDatetime(datetime2)).toBe('2018-03-08');
 });
 
 test('packageArticles', () => {
