@@ -31,9 +31,11 @@ For import functionality, see [the original README](https://github.com/contentst
 1. Run `npm run prep` to build new data files
 1. Double-check that article reference fields point to NON *IMPORT versions
 1. `npm run import`
-1. Consider updating the references in CS to REMOVE *_import_testing options
+1. Consider updating the references in CS to REMOVE \*\_import_testing options
 
-NOTE: Lots of vague errors in the console are normal. Usual suspects:
+## NOTES
+
+Lots of vague errors in the console are normal. Usual suspects:
 
 ```
 error: Success file was not found at: /Users/emerson/Code/contentstack-import/_backup_841/mapper/entries/en-us/juice_article/success.json
@@ -44,3 +46,15 @@ error: {"error_message":"Entry update failed.","error_code":121,"errors":{"title
 ```
 
 ^ Neither of these appear to indicate that a problem actually happened.
+
+### Extensions...
+
+The uid will differ between stacks
+
+#### JSON-LD
+* baptist: blt6fdc0a4e2cfdc8d1
+* shared: blt3c48cda4d08f29ea
+
+#### Brightcove Video Field
+* baptist: blt517c4d1c70025ab5
+* shared: blt46e9bd875f627dd5
