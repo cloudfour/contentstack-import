@@ -51,6 +51,10 @@ error: {"error_message":"Entry update failed.","error_code":121,"errors":{"title
 
 The uid will differ between stacks
 
+#### Cloudinary Image picker
+* baptist: blt89fd64a1fb1db625
+* shared: bltfcf57ea6bf97d945
+
 #### JSON-LD
 * baptist: blt6fdc0a4e2cfdc8d1
 * shared: blt3c48cda4d08f29ea

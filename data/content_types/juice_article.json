@@ -91,7 +91,7 @@
                 },
                 {
                     "display_name": "Header Image (Optional)",
-                    "extension_uid": "blt89fd64a1fb1db625",
+                    "extension_uid": "bltfcf57ea6bf97d945",
                     "field_metadata": {
                         "extension": true
                     },
@@ -332,7 +332,7 @@
                     "schema": [
                         {
                             "display_name": "Image",
-                            "extension_uid": "blt89fd64a1fb1db625",
+                            "extension_uid": "bltfcf57ea6bf97d945",
                             "field_metadata": {
                                 "extension": true
                             },
@@ -441,7 +441,7 @@
                         },
                         {
                             "display_name": "Video",
-                            "extension_uid": "blt517c4d1c70025ab5",
+                            "extension_uid": "blt46e9bd875f627dd5",
                             "field_metadata": {
                                 "extension": true,
                                 "version": 3,
@@ -470,7 +470,7 @@
         },
         {
             "display_name": "JSON-LD",
-            "extension_uid": "blt6fdc0a4e2cfdc8d1",
+            "extension_uid": "blt3c48cda4d08f29ea",
             "field_metadata": {
                 "extension": true
             },
