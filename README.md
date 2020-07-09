@@ -25,20 +25,8 @@ For import functionality, see [the original README](https://github.com/contentst
 * `npm run prep` will read the files from source_data/ and write to output_data/
 * `npm run test` will run the test suite
 
-## Requirements
-
-[x] Replace non-whitelisted authors with "Juice Staff"
-[x] Map author usernames to auther entry (imports)
-[x] Filter out articles NOT ( isActive && isPublished )
-[x] Parse the string of category strings into individual items
-[x] Map categories to category entries
-[x] Gather image fields to match the Cloudinary fields
-[x] Coerce SequenceId into int field
-[x] Map image caption to `legacy_image_caption`
-[x] Compile the URL field from various fields
-
 ## Import Sequence Checklist
-1. Update `productionMode` variable in config.js
+1. Update `productionMode` variable in `prep-baptist-data/config.js`
 1. Run `npm run test` to make sure nothing broke
 1. Run `npm run prep` to build new data files
 1. Double-check that article reference fields point to NON *IMPORT versions
