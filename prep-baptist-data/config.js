@@ -17,7 +17,7 @@ const contentTypes = {
     }
 };
 
-exports.productionMode = false;
+exports.productionMode = true;
 
 exports.dataDirPath = './data';
 exports.contentTypes = contentTypes;
