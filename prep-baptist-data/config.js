@@ -1,6 +1,6 @@
 const authorsFileName = 'juice-authors.json';
 const categoriesFileName = 'juice-category.json';
-const articlesFileName = 'juice-articles-2020-07-02.json';
+const articlesFileName = 'juice-articles-2020-08-12.json';
 
 const contentTypes = {
     author: {
