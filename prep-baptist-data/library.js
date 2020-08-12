@@ -157,7 +157,7 @@ const packageArticles = (old) => {
 const trimDateFromDatetime = (datetime) => datetime ? datetime.split(/[T\s]/)[0] : null;
 
 const buildArticleUrl = (article) => {
-    return "/juice/Stories/" + article.CategoryUrl + '/' + article.Url;
+    return "/juice/stories/" + article.CategoryUrl + '/' + article.Url;
 };
 
 const buildCloudinaryFields = (article) => {

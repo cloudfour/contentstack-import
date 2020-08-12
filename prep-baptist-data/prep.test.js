@@ -226,7 +226,7 @@ test('packageArticles', () => {
     );
     expect(firstPackagedArticle["legacy_sequence_id"]).toBe(100);
     expect(firstPackagedArticle["legacy_image_caption"]).toBe("Christina Golden with her husband.");
-    expect(firstPackagedArticle["url"]).toBe("/juice/Stories/pregnancy-childbirth/a-joyous-birth-followed-by-a-terrifying-surgery");
+    expect(firstPackagedArticle["url"]).toBe("/juice/stories/pregnancy-childbirth/a-joyous-birth-followed-by-a-terrifying-surgery");
     expect(firstPackagedArticle["legacy_publication_date"]).toBe("2017-03-17");
 
     expect(secondPackagedArticle["category"]).toStrictEqual(
